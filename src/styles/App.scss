@@ -29,6 +29,9 @@ $white: #fff;
 // variáveis com letter-spacing
 $spaced: 0.3rem;
 
+// border-radius padrão
+$main-br: 60px;
+
 // classe container com breakpoints e sempre centralizada. Será utilizada e sobrescrita diversas vezes ao longo deste arquivo
 .container {
     @media screen and (max-width: 600px) {
@@ -40,6 +43,23 @@ $spaced: 0.3rem;
     width: 80%;
     max-width: 1200px;
     margin: 0 auto; // sempre centralizado
+}
+
+// como quase todos os links e botões da página têm o mesmo formato, então vou extender variações a partir da classe que crio agora
+@mixin btn($bg-color, $text-color, $border:false, $border-color:none) {
+    font-family: $font-bold;
+    border-radius: $main-br;
+    letter-spacing: $spaced;
+    text-transform: uppercase;
+    padding: 0.8rem 1.5rem;
+    @if $border {
+        border: 3px solid $border-color;
+    } @else {
+        border: none;
+    }
+    background-color: $bg-color;
+    color: $text-color;
+    width: fit-content;
 }
 
 // estilizando navbar
@@ -64,13 +84,7 @@ nav {
         }
     }
     #agendar {
-        padding: 0.7rem;
-        background-color: $main-blue;
-        color: $white;
-        border-radius: 50px;
-        letter-spacing: $spaced;
-        text-transform: uppercase;
-        margin-left: 2rem;
+        @include btn($main-blue, $white, none);
     }
     img {
         height: 2rem;
@@ -108,7 +122,7 @@ header {
                 width: 80%;
                 font-family: $font-light;
                 padding: 1rem 2rem;
-                border-radius: 60px;
+                border-radius: $main-br;
                 border: none;
                 &:focus {
                     outline: 2px solid $main-blue;
@@ -116,15 +130,7 @@ header {
             }
             button {
                 transition: 0.5s;
-                text-transform: uppercase;
-                width: fit-content;
-                background-color: $main-blue;
-                border: none;
-                letter-spacing: $spaced;
-                color: $white;
-                font-family: $font-bold;
-                padding: 1rem 2rem;
-                border-radius: 30px;
+                @include btn($main-blue, $white);
                 &:hover {
                     background-color: $darker-blue;
                     cursor: pointer;
