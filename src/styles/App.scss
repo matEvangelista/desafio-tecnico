@@ -1,21 +1,60 @@
 // importando fontes. Não pude encontrá-las no google fonts
 @font-face {
-    font-family: 'light';
+    font-family: "light";
     src: url("fonts/ArgentumSans-Light.ttf");
 }
 @font-face {
-    font-family: 'regular';
+    font-family: "regular";
     src: url("fonts/ArgentumSans-Regular.ttf");
 }
 @font-face {
-    font-family: 'bold';
+    font-family: "bold";
     src: url("fonts/ArgentumSans-Bold.ttf");
 }
 
+html {
+    font-size: calc(15px + 0.390625vw); // 1 rem equivale a isto
+}
+
 // criando variáveis a partir das fontes
-$font-light: 'light';
-$font-regular: 'regular';
-$font-bold: 'bold';
+$font-light: "light";
+$font-regular: "regular";
+$font-bold: "bold";
 
 // variáveis com a cor principaç
-$main-blue: #005BD5;
+$main-blue: #005bd5;
+$white: #fff;
+
+// classe container com breakpoints e sempre centralizada. Será utilizada e sobrescrita diversas vezes ao longo deste arquivo
+.container {
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 90%;
+    }
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto; // sempre centralizado
+}
+
+// estilizando navbar
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .container {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul {
+        font-family: $font-regular;
+        display: flex;
+        gap: 1rem;
+    }
+    img {
+        height: 1.64rem;
+    }
+}

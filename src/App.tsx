@@ -1,13 +1,11 @@
-import "./styles/App.scss"
-import "./styles/Reset.scss"
+import "./styles/App.scss";
+import "./styles/Reset.scss";
+import Navbar from "./components/Navbar";
 
 function App() {
-
-  return (
-    <>
-      <div>Hello, world.</div>
-    </>
-  )
+    return (<>
+      <Navbar/>
+    </>);
 }
 
-export default App
+export default App;
