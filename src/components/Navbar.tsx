@@ -12,7 +12,7 @@ export default function Navbar() {
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Benefícios</a></li>
                     <li><a href="#">Contato</a></li>
-                    <li><a href="#">Agendar</a></li>
+                    <li><a href="#" id="agendar">Agendar</a></li>
                 </ul>
             </div>
         </nav>
