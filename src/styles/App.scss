@@ -52,9 +52,24 @@ nav {
     ul {
         font-family: $font-regular;
         display: flex;
-        gap: 1rem;
+        gap: 1.5rem;
+        color: $main-blue;
+        li:hover {
+            opacity: .7;
+        }
+    }
+    #agendar {
+        padding: .7rem;
+        background-color: $main-blue;
+        color: $white;
+        border-radius: 50px;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+        margin-left: 2rem;
     }
     img {
-        height: 1.64rem;
+        height: 2rem;
     }
 }
+
+
