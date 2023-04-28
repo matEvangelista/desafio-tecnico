@@ -1,0 +1,21 @@
+// importando fontes. Não pude encontrá-las no google fonts
+@font-face {
+    font-family: 'light';
+    src: url("fonts/ArgentumSans-Light.ttf");
+}
+@font-face {
+    font-family: 'regular';
+    src: url("fonts/ArgentumSans-Regular.ttf");
+}
+@font-face {
+    font-family: 'bold';
+    src: url("fonts/ArgentumSans-Bold.ttf");
+}
+
+// criando variáveis a partir das fontes
+$font-light: 'light';
+$font-regular: 'regular';
+$font-bold: 'bold';
+
+// variáveis com a cor principaç
+$main-blue: #005BD5;
