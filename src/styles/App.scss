@@ -47,7 +47,7 @@ $main-br: 60px;
 }
 
 // como quase todos os links e botões da página têm o mesmo formato, então vou extender variações a partir da classe que crio agora
-@mixin btn($bg-color, $text-color, $border:false, $border-color:none) {
+@mixin btn($bg-color, $text-color, $border: false, $border-color: none) {
     font-family: $font-bold;
     border-radius: $main-br;
     letter-spacing: $spaced;
@@ -61,7 +61,8 @@ $main-br: 60px;
     background-color: $bg-color;
     color: $text-color;
     width: fit-content;
-    transition: .5s;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 // estilizando navbar
@@ -158,7 +159,7 @@ header {
     }
 }
 
-.text-right{
+.text-right {
     background-image: $main-gradient;
     figcaption {
         color: $white;
@@ -216,3 +217,32 @@ header {
     height: fit-content;
 }
 
+.suggestions-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.suggestion {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    a {
+        @include btn(black, $white, true, $white);
+        background-color: transparent;
+        backdrop-filter: blur(30px) brightness(0.8);
+        position: absolute;
+        margin: auto;
+        &:hover {
+            background-color: $white;
+            color: $main-blue;
+        }
+    }
+}
