@@ -16,7 +16,7 @@ export default function Mural() {
             <h2>Nosso mural de Experiências</h2>
             <figure className="images-grid images-container">
                 {array.map((x) => (
-                    <img src={x} alt={name(x)} />
+                    <img src={x} alt={name(x)} key={name(x)} />
                 ))}
             </figure>
             <CardContainer/>

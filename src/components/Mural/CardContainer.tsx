@@ -4,11 +4,13 @@ import img2 from "../../assets/cidades-mais-frequentadas$.svg";
 import img3 from "../../assets/pontos-turísticos$.svg";
 import img4 from "../../assets/Restaurantes$.svg";
 
+import { name } from "../UsefulFunctions";
+
 export default function CardContainer() {
     const imgs:string[] = [img1, img2, img3, img4];
     return(
         <section className="card-container">
-            {imgs.map((el, i) => <Card img={el} alt={el} gray={i % 2 == 0}/>)}
+            {imgs.map((el, i) => <Card img={el} alt={name(el)} gray={i % 2 == 0} key={name(el)}/>)}
         </section>
     )
 }
