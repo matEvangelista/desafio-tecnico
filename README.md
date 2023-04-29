@@ -38,7 +38,7 @@ O arquivo `_variables.scss` contém as variáveis utilizadas ao longo do projeto
 ### 2.2 Mixins
 O arquivo `_mixins.scss` contém a class `container`, que organiza os elementos no centro e cuja largura depende de cada breakpoint de largura de tela.
 
-O mixin `btn` armazena atributos de estilo padrões para os botões e links da página, que quase sempre são iguais. Podem ser personalizados pela `$bg-color`, `$tex-color`, `$border` (booleano) e `$border-color`.
+O mixin `btn` armazena atributos de estilo padrões para os botões e links da página, que quase sempre são iguais. Podem ser personalizados pela `$bg-color`, `$text-color`, `$border` (booleano) e `$border-color`.
 
 Seguindo a mesma linha de raciocínio que explica a existência do mixin btn, há o `basic-input`, que pode ser personalizado com a largura do input de texto, `$width`
 
