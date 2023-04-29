@@ -5,8 +5,9 @@ nav {
     width: 100%;
     background-color: $white;
     z-index: 99999;
+    background-color: $white;
     .container {
-        padding: .5rem 0;
+        padding: 0.5rem 0;
         @include flex-center();
         justify-content: space-between;
     }
@@ -18,12 +19,73 @@ nav {
         li:hover {
             opacity: 0.7;
         }
+        transition: 0.5s;
     }
     #agendar {
         @include btn($main-blue, $white, none);
-        font-size: .8rem;
+        font-size: 0.8rem;
     }
     img {
         height: 2rem;
+    }
+    button {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 35px;
+        background-color: inherit;
+        width:  42px;
+        border: none;
+    }
+    @media screen and (max-width: 1000px) {
+        button {
+            display: flex;
+        }
+        section {
+            width: 100%;
+            @include flex-center();
+            justify-content: space-between;
+            background-color: $white;
+        }
+        .container {
+            @include flex-center(column);
+            padding-top: .5rem;
+            background-color: $white;
+        }
+        ul {
+            position: absolute;
+            background-color: $white;
+            z-index: -1;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 0;
+            transform: translateY(-9.2rem);
+            &.clicked {
+                transform: translateY(2.1rem);
+            }
+        }
+    }
+}
+
+.burger-line {
+    height: 4px;
+    width: 100%;
+    background-color: $main-blue;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+button.active {
+    div:first-child {
+        transform: rotate(45deg);
+        transform-origin: bottom left;
+    }
+    div:last-child {
+        transform: rotate(-45deg);
+        transform-origin: top left;
+    }
+    div:nth-child(2) {
+        transform: translateX(-100%);
+        opacity: 0;
     }
 }
