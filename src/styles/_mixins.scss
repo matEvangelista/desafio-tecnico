@@ -1,0 +1,51 @@
+// classe container com breakpoints e sempre centralizada. Será utilizada e sobrescrita diversas vezes ao longo deste arquivo
+.container {
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 90%;
+    }
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto; // sempre centralizado
+}
+
+// como quase todos os links e botões da página têm o mesmo formato, então este mixin será útil
+@mixin btn($bg-color, $text-color, $border: false, $border-color: none) {
+    font-family: $font-bold;
+    border-radius: $main-br;
+    letter-spacing: $spaced;
+    text-transform: uppercase;
+    padding: 0.8rem 1rem;
+    @if $border {
+        border: 2px solid $border-color;
+    } @else {
+        border: none;
+    }
+    background-color: $bg-color;
+    color: $text-color;
+    width: fit-content;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: .8rem;
+}
+
+//flex center
+@mixin flex-center($flex-direction: row) {
+    display: flex;
+    align-items: center;
+    flex-direction: $flex-direction;
+}
+
+@mixin basic-input($width) {
+    width: $width;
+    font-family: $font-light;
+    padding: 1rem 2rem;
+    border-radius: $main-br;
+    border: none;
+    font-size: 1rem;
+    &:focus {
+        outline: 2px solid $main-blue;
+    }
+}

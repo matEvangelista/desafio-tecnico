@@ -1,0 +1,43 @@
+.contact {
+    background-color: $main-blue;
+    padding: 4rem 0;
+    gap: 2rem;
+    @include flex-center(column);
+    h2 {
+        font-size: 3rem;
+        color: $white;
+        font-family: $font-bold;
+    }
+    form {
+        @include flex-center(column);
+        gap: 1.5rem;
+        label {
+            display: none;
+        }
+        input {
+            @include basic-input(60%);
+            &:focus {
+                outline: 2px solid $darker-blue;
+            }
+        }
+        textarea {
+            @include basic-input(60%);
+            height: 10rem;
+            border: none;
+            border-radius: 20px;
+            &:focus {
+                outline: 2px solid $darker-blue;
+            }
+            placeholder {
+                font-family: $font-light;
+            }
+        }
+        button {
+            @include btn($main-blue, $white, true, $white);
+            &:hover{
+                background-color: $white;
+                color: $darker-blue;
+            }
+        }
+    }
+}

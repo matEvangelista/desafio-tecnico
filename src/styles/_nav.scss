@@ -1,0 +1,29 @@
+// estilizando navbar
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 99999;
+    .container {
+        padding: .5rem 0;
+        @include flex-center();
+        justify-content: space-between;
+    }
+    ul {
+        font-family: $font-regular;
+        display: flex;
+        gap: 1.5rem;
+        color: $main-blue;
+        li:hover {
+            opacity: 0.7;
+        }
+    }
+    #agendar {
+        @include btn($main-blue, $white, none);
+        font-size: .8rem;
+    }
+    img {
+        height: 2rem;
+    }
+}

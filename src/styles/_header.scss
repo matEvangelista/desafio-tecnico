@@ -1,0 +1,41 @@
+header {
+    height: 90vh;
+    background-image: url("../assets/header-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .container {
+        height: inherit;
+        display: flex;
+        align-items: center;
+    }
+    // criei uma classe para div para não poluir o trecho acima
+    .destino {
+        width: 100%;
+        font-size: 1rem;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        h2 {
+            font-family: $font-bold;
+            color: $main-blue;
+            font-size: 3rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: inherit;
+            input {
+                @include basic-input(80%);
+            }
+            button {
+                @include btn($main-blue, $white);
+                &:hover {
+                    background-color: $darker-blue;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

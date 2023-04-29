@@ -1,0 +1,22 @@
+// footer
+footer {
+    color: $main-blue;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: $font-regular;
+    font-size: 0.8rem;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        li:first-of-type {
+            font-family: $font-bold;
+            margin-bottom: 1rem;
+        }
+    }
+    img {
+        height: 2rem;
+    }
+}

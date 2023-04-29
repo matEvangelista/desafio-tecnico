@@ -1,0 +1,23 @@
+html {
+    font-size: calc(15px + 0.390625vw); // 1 rem equivale a isto
+    line-height: 1.3;
+}
+
+// criando variáveis a partir das fontes
+$font-light: "light";
+$font-regular: "regular";
+$font-bold: "bold";
+
+// variáveis com a cor principaç
+$main-blue: #005bd5;
+$darker-blue: #05418f;
+$white: #fff;
+$main-gray: #8b8b8b;
+$light-gray: #eeeeee;
+$main-gradient: linear-gradient($main-blue, #012048);
+
+// variáveis com letter-spacing
+$spaced: 0.3rem;
+
+// border-radius padrão
+$main-br: 60px;
