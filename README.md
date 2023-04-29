@@ -23,7 +23,7 @@ Os components estão organizados desta forma:
 
 O component `Header` contem a imagem de uma kombi, uma pergunta e um formulário para pesquisar o destino.
 
-`Section` corresponde a cada grupo de seções com uma imagem e um texto em que se lê "viagem nacional". `SectionsContainer` foi criado para organizar as seções, que receberam os textos e as imagens por props.
+`Section` corresponde a cada grupo de seções com uma imagem e um texto em que se lê "viagem nacional". `SectionsContainer` foi criado para organizar as seções, que receberam os textos e as imagens por props. Contei com o auxílio da biblioteca <a href="https://www.npmjs.com/package/react-markdown">`react-markdown`</a> para transformar um trecho entre dois pares de astericos em uma tag `strong` do HTML, que foi estilizada no SASS.
 
 `Suggestion` é um card com uma imagem e um link por cima, no qual há o efeito blur. `SuggestionsContainer` funciona como o container descrito acima.
 
