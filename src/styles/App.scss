@@ -25,6 +25,8 @@ $font-bold: "bold";
 $main-blue: #005bd5;
 $darker-blue: #05418f;
 $white: #fff;
+$main-gray: #8b8b8b;
+$light-gray: #EEEEEE;
 $main-gradient: linear-gradient($main-blue, #012048);
 
 // variáveis com letter-spacing
@@ -65,17 +67,24 @@ $main-br: 60px;
     cursor: pointer;
 }
 
+//flex center
+@mixin flex-center($flex-direction: row) {
+    display: flex;
+    align-items: center;
+    flex-direction: $flex-direction;
+}
+
 // estilizando navbar
 nav {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: $white;
+    z-index: 99999;
     .container {
         padding: 1rem 0;
-        display: flex;
+        @include flex-center();
         justify-content: space-between;
-        align-items: center;
     }
     ul {
         font-family: $font-regular;
@@ -212,8 +221,7 @@ header {
             margin-top: 1rem;
         }
     }
-    display: flex;
-    align-items: center;
+    @include flex-center();
     height: fit-content;
 }
 
@@ -226,8 +234,7 @@ header {
 
 .suggestion {
     position: relative;
-    display: flex;
-    align-items: center;
+    @include flex-center();
     justify-content: center;
     img {
         width: 100%;
@@ -245,4 +252,66 @@ header {
             color: $main-blue;
         }
     }
+}
+
+.mural {
+    color: $main-gray;
+    text-align: center;
+    @include flex-center(column);
+    padding-top: 5rem;
+    gap: 2rem;
+    p {
+        font-family: $font-regular;
+        font-size: 1.5rem;
+        width: 50%;
+    }
+    h2 {
+        font-family: $font-bold;
+        font-size: 3rem;
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+}
+
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 80%;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.card {
+    @include flex-center(column);
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    img {
+        height: 5rem;
+    }
+    p {
+        width: 90%;
+        font-size: 1rem;
+        text-align: center;
+    }
+    &.gray {
+        background-color: $light-gray;
+        color: $main-blue;
+    }
+    &.blue {
+        background-color: $main-blue;
+        color: $white;
+    }
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 2rem 0;
+    width: 80%;
+    gap: 2rem;
 }
