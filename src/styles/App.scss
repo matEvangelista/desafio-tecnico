@@ -13,7 +13,7 @@
 }
 
 html {
-    font-size: calc(15px + 0.390625vw); // 1 rem equivale a isto
+    font-size: calc(16px + 0.390625vw); // 1 rem equivale a isto
 }
 
 // criando variáveis a partir das fontes
@@ -26,7 +26,7 @@ $main-blue: #005bd5;
 $darker-blue: #05418f;
 $white: #fff;
 $main-gray: #8b8b8b;
-$light-gray: #EEEEEE;
+$light-gray: #eeeeee;
 $main-gradient: linear-gradient($main-blue, #012048);
 
 // variáveis com letter-spacing
@@ -48,7 +48,7 @@ $main-br: 60px;
     margin: 0 auto; // sempre centralizado
 }
 
-// como quase todos os links e botões da página têm o mesmo formato, então vou extender variações a partir da classe que crio agora
+// como quase todos os links e botões da página têm o mesmo formato, então este mixin será útil
 @mixin btn($bg-color, $text-color, $border: false, $border-color: none) {
     font-family: $font-bold;
     border-radius: $main-br;
@@ -72,6 +72,17 @@ $main-br: 60px;
     display: flex;
     align-items: center;
     flex-direction: $flex-direction;
+}
+
+@mixin basic-input($width) {
+    width: $width;
+    font-family: $font-light;
+    padding: 1rem 2rem;
+    border-radius: $main-br;
+    border: none;
+    &:focus {
+        outline: 2px solid $main-blue;
+    }
 }
 
 // estilizando navbar
@@ -131,14 +142,7 @@ header {
             flex-direction: column;
             gap: inherit;
             input {
-                width: 80%;
-                font-family: $font-light;
-                padding: 1rem 2rem;
-                border-radius: $main-br;
-                border: none;
-                &:focus {
-                    outline: 2px solid $main-blue;
-                }
+                @include basic-input(80%);
             }
             button {
                 @include btn($main-blue, $white);
@@ -314,4 +318,48 @@ header {
     margin: 2rem 0;
     width: 80%;
     gap: 2rem;
+}
+
+.contact {
+    background-color: $main-blue;
+    padding: 4rem 0;
+    gap: 2rem;
+    @include flex-center(column);
+    h2 {
+        font-size: 3rem;
+        color: $white;
+        font-family: $font-bold;
+    }
+    form {
+        @include flex-center(column);
+        gap: 1.5rem;
+        label {
+            display: none;
+        }
+        input {
+            @include basic-input(60%);
+            &:focus {
+                outline: 2px solid $darker-blue;
+            }
+        }
+        textarea {
+            @include basic-input(60%);
+            height: 10rem;
+            border: none;
+            border-radius: 20px;
+            &:focus {
+                outline: 2px solid $darker-blue;
+            }
+            placeholder {
+                font-family: $font-light;
+            }
+        }
+        button {
+            @include btn($main-blue, $white, true, $white);
+            &:hover{
+                background-color: $white;
+                color: $darker-blue;
+            }
+        }
+    }
 }
