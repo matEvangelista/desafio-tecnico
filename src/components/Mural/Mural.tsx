@@ -1,9 +1,9 @@
-import foto1 from "../../assets/amigas.png";
-import foto2 from "../../assets/amigos-pulando.png";
-import foto3 from "../../assets/homem-bebê.png";
-import foto4 from "../../assets/homem-cachorro.png";
-import foto5 from "../../assets/bicicleta.png";
-import foto6 from "../../assets/selfie.png";
+import foto1 from "../../assets/amigas$.png";
+import foto2 from "../../assets/amigos-pulando$.png";
+import foto3 from "../../assets/homem-bebê$.png";
+import foto4 from "../../assets/homem-cachorro$.png";
+import foto5 from "../../assets/bicicleta$.png";
+import foto6 from "../../assets/selfie$.png";
 
 import { name } from "../UsefulFunctions";
 import CardContainer from "./CardContainer";

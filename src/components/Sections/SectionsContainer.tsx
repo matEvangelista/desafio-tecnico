@@ -1,7 +1,7 @@
 import Section from "./Section";
-import casal from "../../assets/casal.png";
-import amigos from "../../assets/amigos.png";
-import amigosPiscina from "../../assets/amigos-piscina.png"
+import casal from "../../assets/casal$.png";
+import amigos from "../../assets/amigos$.png";
+import amigosPiscina from "../../assets/amigos-piscina$.png"
 
 export default function SectionsContainer() {
     return (
