@@ -33,9 +33,9 @@ O component `Header` contem a imagem de uma kombi, uma pergunta e um formulário
 
 ## 2 - Organização do SASS
 ### 2.1 Variables
-O arquivo `_variables.scss` contém as variáveis utilizadas ao longo do projeto, como tipos de fonte, cores, espaçamento de letras, gradiente e border-radius padrão.
+O arquivo `_variables.scss` contém as variáveis utilizadas ao longo do projeto, como tipos de fonte, cores, espaçamento de letras, gradiente e border-radius padrões.
 
-## 2.2 Mixins
+### 2.2 Mixins
 O arquivo `_mixins.scss` contém a class `container`, que organiza os elementos no centro e cuja largura depende de cada breakpoint de largura de tela.
 
 O mixin `btn` armazena atributos de estilo padrões para os botões e links da página, que quase sempre são iguais. Podem ser personalizados pela `$bg-color`, `$tex-color`, `$border` (booleano) e `$border-color`.
