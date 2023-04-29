@@ -1,5 +1,5 @@
 // há apenas dois tipos de sections: as que possuem foto à direita e texto à esquerda e o contrário disso.
-// é passado por props a variável textLeft, que representa a segunda situação e será utilizada como condição no SASS
+// é passado por props a variável textLeft, que representa a segunda situação
 export default function Section ({
     textLeft,
     img,
