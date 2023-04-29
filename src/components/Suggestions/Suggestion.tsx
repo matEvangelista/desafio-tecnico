@@ -1,4 +1,4 @@
-import { name } from "./UsefulFunctions";
+import { name } from "../UsefulFunctions";
 
 export default function Suggestion({ img, alt }: { img: string; alt: string }) {
     return (

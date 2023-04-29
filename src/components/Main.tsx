@@ -1,7 +1,7 @@
-import Contact from "./Contact";
-import Mural from "./Mural";
-import SectionsContainer from "./SectionsContainer";
-import SuggestionsContainer from "./SuggestionsContainer";
+import Contact from "./Contact/Contact";
+import Mural from "./Mural/Mural";
+import SectionsContainer from "./Sections/SectionsContainer";
+import SuggestionsContainer from "./Suggestions/SuggestionsContainer";
 
 export default function Main() {
     return(<>

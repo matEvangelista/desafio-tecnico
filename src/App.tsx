@@ -1,7 +1,7 @@
 import "./styles/Reset.scss";
 import "./styles/App.scss";
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
+import Navbar from "./components/NavHeader/Navbar";
+import Header from "./components/NavHeader/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 

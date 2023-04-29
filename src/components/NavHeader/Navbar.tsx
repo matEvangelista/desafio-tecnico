@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 export default function Navbar() {
     // "container" serve para centralizar e determinar a largura conforme o tamanho da tela. Mais detalhes em App.scss.
