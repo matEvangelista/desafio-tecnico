@@ -6,6 +6,7 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 
 function App() {
+    // mais detalhes no README.md
     return (
         <>
             <Navbar />
