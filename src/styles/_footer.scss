@@ -2,21 +2,37 @@
 footer {
     color: $main-blue;
     padding: 2rem 0;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
     align-items: baseline;
+    justify-items: start;
     font-family: $font-regular;
     font-size: 0.8rem;
     ul {
         display: flex;
+        width: 100%;
         flex-direction: column;
         gap: 0.5rem;
         li:first-of-type {
             font-family: $font-bold;
             margin-bottom: 1rem;
         }
+        align-self: center;
     }
     img {
         height: 2rem;
+    }
+
+    // responsividade
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3rem;
+        ul {
+            align-items: center;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
     }
 }
