@@ -19,6 +19,10 @@ footer {
             margin-bottom: 1rem;
         }
         align-self: center;
+        a {
+            cursor: pointer;
+            &:hover {opacity: 0.5;}
+        }
     }
     img {
         height: 2rem;

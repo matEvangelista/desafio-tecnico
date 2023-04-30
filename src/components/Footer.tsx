@@ -4,39 +4,81 @@ export default function Footer() {
     return (
         <footer className="container">
             <ul>
-                <li><img src={logo} alt="logo" /></li>
-                <li>Sobre nós</li>
-                <li>Mural de memórias</li>
-                <li>Eventos gudi</li>
-                <li>Nosso blog</li>
+                <li>
+                    <img src={logo} alt="logo" />
+                </li>
+                <li>
+                    <a>Sobre nós</a>
+                </li>
+                <li>
+                    <a>Mural de memórias</a>
+                </li>
+                <li>
+                    <a>Eventos gudi</a>
+                </li>
+                <li>
+                    <a>Nosso blog</a>
+                </li>
             </ul>
             <ul>
                 <li>Contato</li>
-                <li>Char virtual</li>
-                <li>SAC Online</li>
-                <li>Ouvidoria</li>
-                <li>FAQ</li>
+                <li>
+                    <a>Char virtual</a>
+                </li>
+                <li>
+                    <a>SAC Online</a>
+                </li>
+                <li>
+                    <a>Ouvidoria</a>
+                </li>
+                <li>
+                    <a>FAQ</a>
+                </li>
             </ul>
             <ul>
                 <li>Benefícios</li>
-                <li>Conta digital Gudi</li>
-                <li>Viaje com Milhas</li>
-                <li>C6 Átomos</li>
-                <li>ID Jovem</li>
+                <li>
+                    <a>Conta digital Gudi</a>
+                </li>
+                <li>
+                    <a>Viaje com Milhas</a>
+                </li>
+                <li>
+                    <a>C6 Átomos</a>
+                </li>
+                <li>
+                    <a>ID Jovem</a>
+                </li>
             </ul>
             <ul>
                 <li>Lugares</li>
-                <li>O melhor do Brasil</li>
-                <li>Pontos turísticos</li>
-                <li>Cidades frequentes</li>
-                <li>Restaurantes</li>
+                <li>
+                    <a>O melhor do Brasil</a>
+                </li>
+                <li>
+                    <a>Pontos turísticos</a>
+                </li>
+                <li>
+                    <a>Cidades frequentes</a>
+                </li>
+                <li>
+                    <a>Restaurantes</a>
+                </li>
             </ul>
             <ul>
                 <li>Curiosidades</li>
-                <li>Cultura e tradições</li>
-                <li>Pratos típicos</li>
-                <li>Mitos brasileiros</li>
-                <li>Carnaval</li>
+                <li>
+                    <a>Cultura e tradições</a>
+                </li>
+                <li>
+                    <a>Pratos típicos</a>
+                </li>
+                <li>
+                    <a>Mitos brasileiros</a>
+                </li>
+                <li>
+                    <a>Carnaval</a>
+                </li>
             </ul>
         </footer>
     );
