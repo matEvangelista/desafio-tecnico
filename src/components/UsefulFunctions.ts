@@ -1,6 +1,11 @@
 // esta extrai o nome da imagem a partir de seu endereço. Por exemplo: /src/assets/rio-de-janeiro$.png -> rio de janeiro
 // assume, é claro, que a entrada vai estar escrita-desta-forma
 export function name(path: string) {
+    // if feito apenas para o github pages
+    if (path.includes("_"))
+        return path
+            .slice(path.lastIndexOf("/") + 1, path.indexOf("_"))
+            .replaceAll("-", " ");
     return path
         .slice(path.lastIndexOf("/") + 1, path.indexOf("$"))
         .replaceAll("-", " ");
