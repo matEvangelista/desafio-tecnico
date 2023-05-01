@@ -4,10 +4,10 @@ import SectionsContainer from "./Sections/SectionsContainer";
 import SuggestionsContainer from "./Suggestions/SuggestionsContainer";
 
 export default function Main() {
-    return(<>
+    return(<main>
         <SectionsContainer/>
         <SuggestionsContainer/>
         <Mural/>
         <Contact/>
-    </>)
+    </main>)
 }
